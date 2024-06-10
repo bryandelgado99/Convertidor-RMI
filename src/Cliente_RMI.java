@@ -31,6 +31,7 @@ public class Cliente_RMI {
                 System.out.println("Seleccione su mecanismo de conversión:");
                 System.out.println("1. Farenheit a Celcius");
                 System.out.println("2. Celcius a Farenheit");
+                System.out.println("3. Salir");
                 System.out.println("\n----------------------------------------------------------");
                 int seleccion = input.nextInt();
 
@@ -46,7 +47,10 @@ public class Cliente_RMI {
                         double respuesta_b = objetoRemoto.celcius_far(temperature);
                         System.out.println("La medida de " + temperature + "°C" + " equivale a " + respuesta_b +"°F.");
                         TimeUnit.SECONDS.sleep(10);
-
+                        break;
+                    case 3:
+                        System.out.println("\nHasta luego!... \n");
+                        System.exit(1);
                         break;
                     default:
                         System.out.println("No existe dicha opción, intente nuevamente...");
